@@ -10,7 +10,7 @@ function Home() {
 
   const loadStudents = async () => {
     const response = await axios.get(
-      "https://icp-9-first-server.onrender.com/students"
+      `${import.meta.env.VITE_API_URL}/students`
     );
     setStudents(response.data.data);
   };

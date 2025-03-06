@@ -15,7 +15,7 @@ function Edit() {
   const editStudent = async () => {
     try {
       const response = await axios.put(
-        `https://icp-9-first-server.onrender.com/students/${userId}`,
+        `${import.meta.env.VITE_API_URL}/students/${userId}`,
         {
           name: student.name,
           city: student.city,
@@ -35,7 +35,7 @@ function Edit() {
   const loadStudent = async () => {
     try {
       const response = await axios.get(
-        `https://icp-9-first-server.onrender.com/students/${userId}`
+        `${import.meta.env.VITE_API_URL}/students/${userId}`
       );
       setStudent(response.data.data);
     } catch (e) {
