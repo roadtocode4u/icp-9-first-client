@@ -9,7 +9,9 @@ function Home() {
   const [students, setStudents] = useState([]);
 
   const loadStudents = async () => {
-    const response = await axios.get("http://localhost:5001/students");
+    const response = await axios.get(
+      "https://icp-9-first-server.onrender.com/students"
+    );
     setStudents(response.data.data);
   };
 

@@ -11,11 +11,14 @@ function Add() {
 
   const addStudent = async () => {
     try {
-      const response = await axios.post("http://localhost:5001/students", {
-        id: student.id,
-        name: student.name,
-        city: student.city,
-      });
+      const response = await axios.post(
+        "https://icp-9-first-server.onrender.com/students",
+        {
+          id: student.id,
+          name: student.name,
+          city: student.city,
+        }
+      );
 
       if (response.data.success) {
         setStudent({
